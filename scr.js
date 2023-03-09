@@ -3,14 +3,15 @@ function Conversion() {
     let From = document.getElementById('From').value;
     let To = document.getElementById('To').value;
     let Result;
-    if (From === 'USD' && To === "VND") {
-        Result = 'Kết quả là: ' + (Amount * 23500) + ' Đồng';
-    } else if (From === "VND" && To === "USD") {
-        Result = 'Kết quả là: ' + (Amount / 23500) + ' $'
-    } else if (From === "VND") {
-        Result ='Kết quả là: ' + (Amount) + ' Đồng'
-    } else {
-        Result ='Kết quả là: ' + (Amount) + ' $'
-    }
+    // if (From === 'USD' && To === "VND") {
+    //     Result = 'Kết quả là: ' + (Amount * 23500) + ' Đồng';
+    // } else if (From === "VND" && To === "USD") {
+    //     Result = 'Kết quả là: ' + (Amount / 23500) + ' $'
+    // } else if (From === "VND") {
+    //     Result ='Kết quả là: ' + (Amount) + ' Đồng'
+    // } else {
+    //     Result ='Kết quả là: ' + (Amount) + ' $'
+    // }
+    Result = 'Kết quả là: ' + (Amount*To/From)
     document.getElementById("Result").innerHTML= Result;
 }
